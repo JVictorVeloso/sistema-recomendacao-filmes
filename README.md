@@ -1,44 +1,43 @@
-# 🎬 Sistema de Recomendação de Filmes
+🎬 Sistema de Recomendação de Filmes
+➡️ Ver a Aplicação Online
+Uma aplicação web interativa construída com Python e Streamlit que recomenda filmes com base numa amostra da vasta base de dados do IMDb. Este projeto foi desenvolvido como parte do meu portfólio de Análise de Dados e Engenharia de Software.
 
-Uma aplicação web interativa construída com Python e Streamlit que recomenda filmes com base na vasta base de dados do IMDb. Este projeto foi desenvolvido como parte do meu portfólio de Data Science/Análise de Dados.
+📜 Sobre o Projeto
+O objetivo deste projeto é demonstrar o ciclo completo de uma aplicação de dados, desde a recolha e limpeza de dados até à criação de uma interface de utilizador funcional (UI). A versão online utiliza uma amostra dos dados para garantir um desempenho rápido e cumprir os limites de memória do ambiente de deploy gratuito.
 
-![Screenshot da Aplicação](https://github.com/JVictorVeloso/sistema-recomendacao-filmes/blob/main/img.png)
+A aplicação permite que o utilizador selecione um género de filme e receba em troca uma lista dos 10 filmes mais bem avaliados daquele género.
 
----
+✨ Funcionalidades
+Interface Web Interativa: Construída com Streamlit para uma experiência de utilizador limpa e moderna.
 
-## 📜 Sobre o Projeto
+Seleção de Género: Um menu dropdown permite ao utilizador escolher facilmente entre dezenas de géneros.
 
-O objetivo deste projeto é demonstrar o ciclo completo de uma aplicação de dados, desde a coleta e limpeza de grandes volumes de dados até a criação de uma interface de usuário amigável e funcional para apresentar os resultados. A aplicação permite que o usuário selecione um gênero de filme e recebe em troca uma lista dos 10 filmes mais bem avaliados daquele gênero, de acordo com as notas do IMDb.
+Processamento de Dados com Pandas: Utiliza a biblioteca Pandas para carregar, limpar e processar os ficheiros de dados.
 
----
+Cache Inteligente: O Streamlit armazena os dados processados em cache para garantir que a aplicação seja rápida e responsiva após o primeiro carregamento.
 
-## ✨ Funcionalidades (Features)
+Deploy Contínuo: A aplicação está hospedada no Streamlit Community Cloud e é atualizada automaticamente a cada push para a branch main.
 
-- **Interface Web Interativa:** Construída com Streamlit para uma experiência de usuário limpa e moderna.
-- **Seleção de Gênero:** Um menu dropdown permite ao usuário escolher facilmente entre dezenas de gêneros.
-- **Processamento de Dados em Larga Escala:** Utiliza a biblioteca Pandas para carregar, limpar e processar milhões de registros da base de dados do IMDb.
-- **Cache Inteligente:** O Streamlit armazena os dados processados em cache para garantir que a aplicação seja rápida e responsiva após o primeiro carregamento.
+🛠️ Tecnologias Utilizadas
+Linguagem: Python 3
 
----
+Bibliotecas de Dados: Pandas
 
-## 🛠️ Tecnologias Utilizadas
+Framework Web: Streamlit
 
-- **Linguagem:** Python 3
-- **Bibliotecas de Dados:** Pandas
-- **Framework Web:** Streamlit
-- **Versionamento de Código:** Git e GitHub
+Versionamento de Código: Git & GitHub
 
----
+Gestão de Ficheiros Grandes: Git LFS
 
-## 🚀 Como Executar o Projeto Localmente
+Hospedagem: Streamlit Community Cloud
 
+🚀 Como Executar o Projeto Localmente
 Siga os passos abaixo para rodar a aplicação no seu próprio computador.
 
-```bash
-# 1. Clone o repositório
+# 1. Clone o repositório (requer Git LFS instalado)
 git clone [https://github.com/JVictorVeloso/sistema-recomendacao-filmes.git](https://github.com/JVictorVeloso/sistema-recomendacao-filmes.git)
 
-# 2. Navegue até a pasta do projeto
+# 2. Navegue até à pasta do projeto
 cd sistema-recomendacao-filmes
 
 # 3. Crie um ambiente virtual
@@ -55,8 +54,5 @@ pip install -r requirements.txt
 
 # 6. Rode a aplicação Streamlit
 streamlit run app.py
-```
 
-**Observação:** Os arquivos de dados do IMDb não estão incluídos neste repositório por excederem o limite de tamanho do GitHub. Para rodar o projeto, é necessário baixar os arquivos `title.basics.tsv.gz` e `title.ratings.tsv.gz` do site oficial do [IMDb Datasets](https://www.imdb.com/interfaces/) e colocá-los na pasta raiz do projeto.
-
----
+Observação sobre os dados: Este repositório contém os ficheiros de dados completos, geridos através do Git LFS. A versão online utiliza ficheiros de amostra (sample_...) para otimização de memória. Os dados originais são do IMDb Datasets.
