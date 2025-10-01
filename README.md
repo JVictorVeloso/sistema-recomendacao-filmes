@@ -27,14 +27,12 @@ Framework Web: Streamlit
 
 Versionamento de Código: Git & GitHub
 
-Gestão de Ficheiros Grandes: Git LFS
-
 Hospedagem: Streamlit Community Cloud
 
 🚀 Como Executar o Projeto Localmente
 Siga os passos abaixo para rodar a aplicação no seu próprio computador.
 
-# 1. Clone o repositório (requer Git LFS instalado)
+# 1. Clone o repositório
 git clone [https://github.com/JVictorVeloso/sistema-recomendacao-filmes.git](https://github.com/JVictorVeloso/sistema-recomendacao-filmes.git)
 
 # 2. Navegue até à pasta do projeto
@@ -55,4 +53,4 @@ pip install -r requirements.txt
 # 6. Rode a aplicação Streamlit
 streamlit run app.py
 
-Observação sobre os dados: Este repositório contém os ficheiros de dados completos, geridos através do Git LFS. A versão online utiliza ficheiros de amostra (sample_...) para otimização de memória. Os dados originais são do IMDb Datasets.
+Observação sobre os dados: A versão online utiliza ficheiros de amostra (sample_...) para otimização. Os dados originais e completos podem ser descarregados do IMDb Datasets.
