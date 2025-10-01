@@ -1,56 +1,48 @@
-🎬 Sistema de Recomendação de Filmes
-➡️ Ver a Aplicação Online
-Uma aplicação web interativa construída com Python e Streamlit que recomenda filmes com base numa amostra da vasta base de dados do IMDb. Este projeto foi desenvolvido como parte do meu portfólio de Análise de Dados e Engenharia de Software.
+## 🎬 Sistema de Recomendação de Filmes
 
-📜 Sobre o Projeto
-O objetivo deste projeto é demonstrar o ciclo completo de uma aplicação de dados, desde a recolha e limpeza de dados até à criação de uma interface de utilizador funcional (UI). A versão online utiliza uma amostra dos dados para garantir um desempenho rápido e cumprir os limites de memória do ambiente de deploy gratuito.
+### [➡️ Ver a Aplicação Online](https://sistema-recomendacao-filmes-9tjpjcw8kwxer8xgzgrhq5.streamlit.app/)
 
-A aplicação permite que o utilizador selecione um género de filme e receba em troca uma lista dos 10 filmes mais bem avaliados daquele género.
+Este projeto é uma **aplicação web interativa** construída com **Python** e **Streamlit** que recomenda filmes com base numa amostra da vasta base de dados do **IMDb**. O objetivo é demonstrar o ciclo completo de uma aplicação de dados, desde a recolha e limpeza de dados até à criação de uma interface de utilizador funcional.
 
-✨ Funcionalidades
-Interface Web Interativa: Construída com Streamlit para uma experiência de utilizador limpa e moderna.
+![Screenshot da Aplicação a Funcionar](screenshot.png)
 
-Seleção de Género: Um menu dropdown permite ao utilizador escolher facilmente entre dezenas de géneros.
+---
 
-Processamento de Dados com Pandas: Utiliza a biblioteca Pandas para carregar, limpar e processar os ficheiros de dados.
+## ✨ Funcionalidades
 
-Cache Inteligente: O Streamlit armazena os dados processados em cache para garantir que a aplicação seja rápida e responsiva após o primeiro carregamento.
+- 🖥️ **Interface Web Interativa:** Construída com **Streamlit** para uma experiência de utilizador limpa e moderna.
+- 👇 **Seleção de Género:** Um menu _dropdown_ permite ao utilizador escolher facilmente entre dezenas de géneros.
+- 🗃️ **Processamento de Dados:** Utiliza a biblioteca **Pandas** para carregar, limpar e processar os ficheiros de dados.
+- ⚡ **Cache Inteligente:** O Streamlit armazena os dados processados para garantir que a aplicação seja rápida e responsiva.
+- ☁️ **Hospedagem:** A aplicação está hospedada via **Streamlit Community Cloud** para acesso público.
 
-Deploy Contínuo: A aplicação está hospedada no Streamlit Community Cloud e é atualizada automaticamente a cada push para a branch main.
+---
 
-🛠️ Tecnologias Utilizadas
-Linguagem: Python 3
+## 🛠️ Tecnologias Utilizadas
 
-Bibliotecas de Dados: Pandas
+- **Linguagem:** Python 3
+- **Bibliotecas:** pandas, streamlit
+- **Hospedagem:** Streamlit Community Cloud
+- **Controlo de Versão:** Git & GitHub
 
-Framework Web: Streamlit
+---
 
-Versionamento de Código: Git & GitHub
+## 🚀 Como Executar o Projeto Localmente
 
-Hospedagem: Streamlit Community Cloud
-
-🚀 Como Executar o Projeto Localmente
-Siga os passos abaixo para rodar a aplicação no seu próprio computador.
-
+```bash
 # 1. Clone o repositório
 git clone [https://github.com/JVictorVeloso/sistema-recomendacao-filmes.git](https://github.com/JVictorVeloso/sistema-recomendacao-filmes.git)
 
 # 2. Navegue até à pasta do projeto
 cd sistema-recomendacao-filmes
 
-# 3. Crie um ambiente virtual
+# 3. Crie e ative um ambiente virtual
 python -m venv venv
-
-# 4. Ative o ambiente virtual
-# No Windows:
 .\venv\Scripts\activate
-# No macOS/Linux:
-# source venv/bin/activate
 
-# 5. Instale as dependências
+# 4. Instale as dependências
 pip install -r requirements.txt
 
-# 6. Rode a aplicação Streamlit
+# 5. Rode a aplicação
 streamlit run app.py
-
-Observação sobre os dados: A versão online utiliza ficheiros de amostra (sample_...) para otimização. Os dados originais e completos podem ser descarregados do IMDb Datasets.
+```
