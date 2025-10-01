@@ -9,11 +9,15 @@ def carregar_dados():
         "Carregando e limpando os dados... (Isso só deve acontecer uma vez por sessão)"
     )
     try:
-        basics_df = pd.read_csv("title.basics.tsv.gz", sep="\t", low_memory=False)
-        ratings_df = pd.read_csv("title.ratings.tsv.gz", sep="\t")
+        # --- ALTERAÇÃO PRINCIPAL AQUI ---
+        # Lendo os arquivos de AMOSTRA (sample), que são mais leves para o deploy.
+        basics_df = pd.read_csv(
+            "sample_title.basics.tsv.gz", sep="\t", low_memory=False
+        )
+        ratings_df = pd.read_csv("sample_title.ratings.tsv.gz", sep="\t")
     except FileNotFoundError:
         st.error(
-            "Arquivos de dados não encontrados! Certifique-se que `title.basics.tsv.gz` e `title.ratings.tsv.gz` estão na pasta."
+            "Arquivos de dados de amostra não encontrados! Execute o script `create_sample.py` primeiro e envie as alterações para o GitHub."
         )
         return None
 
@@ -24,7 +28,9 @@ def carregar_dados():
         filmes_df["averageRating"], errors="coerce"
     )
     filmes_df["numVotes"] = pd.to_numeric(filmes_df["numVotes"], errors="coerce")
-    filmes_df = filmes_df[filmes_df["numVotes"] > 5000]
+
+    # Reduzimos o filtro de votos para a amostra, para garantir que teremos resultados
+    filmes_df = filmes_df[filmes_df["numVotes"] > 1000]
     print("Dados prontos!")
     return filmes_df
 
@@ -40,8 +46,9 @@ def recomendar_por_genero(df, genero):
 
 st.set_page_config(layout="wide")  # Deixa a página mais larga
 st.title("🎬 Sistema de Recomendação de Filmes")
+# Alteramos a descrição para informar que é uma amostra
 st.write(
-    "Uma aplicação web simples para recomendar filmes baseada na base de dados do IMDb."
+    "Uma aplicação web simples para recomendar filmes baseada em uma amostra da base de dados do IMDb."
 )
 
 # Carrega os dados
